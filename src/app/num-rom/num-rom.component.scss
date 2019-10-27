@@ -1,11 +1,23 @@
 :host{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+@mixin common_style {
+  border: 1px solid #333;
+  padding: 10px;
+}
 
 .test{
 display: flex;
 flex-direction: column;
 text-align: center;
+input{
+    @include common_style;
+}
+button{
+    @include common_style;
+    background: #333;
+    color: #fff;
+}
 h1{
     font-weight: 100;
     margin: 0px;

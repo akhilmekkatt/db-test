@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { NumRomComponent } from './num-rom.component';
+import { FormsModule } from '@angular/forms';
+
+
 
 describe('NumRomComponent', () => {
   let component: NumRomComponent;
@@ -8,6 +10,7 @@ describe('NumRomComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [FormsModule],
       declarations: [NumRomComponent]
     })
       .compileComponents();
@@ -17,11 +20,22 @@ describe('NumRomComponent', () => {
     fixture = TestBed.createComponent(NumRomComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+
   });
 
-
-  it('should convert numeric to roman', () => {
+  it('12 should be equal to roman value XII', () => {
 
     expect(component.convertToRoman(12)).toBe("XII");
   });
+
+  it('4 should be equal to roman value IV', () => {
+
+    expect(component.convertToRoman(4)).toBe("IV");
+  });
+
+  it('4 should not to be equal to roman value X', () => {
+
+    expect(component.convertToRoman(4)).not.toBe("X");
+  });
+
 });

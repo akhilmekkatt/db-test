@@ -12,7 +12,7 @@ import { NumRomComponent } from './num-rom/num-rom.component';
   ],
   imports: [
     BrowserModule, FormsModule
-  ],
+  ], exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })
