@@ -18,6 +18,9 @@ button{
     background: #333;
     color: #fff;
 }
+button:disabled{
+    background: #999;
+}
 h1{
     font-weight: 100;
     margin: 0px;
